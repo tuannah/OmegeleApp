@@ -13,24 +13,54 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="Omegle "
+        android:text="@string/omegle"
         android:textColor="#000000"
         android:textSize="24sp" />
 
+    <!-- Ô nhập tên -->
     <EditText
-        android:id="@+id/editTextInterests"
+        android:id="@+id/editTextName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your interests (comma separated)"
+        android:autofillHints=""
+        android:hint="@string/enter_your_name"
+        android:inputType="textPersonName"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Ô nhập quốc tịch -->
+    <EditText
+        android:id="@+id/editTextNationality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_your_nationality"
         android:inputType="text"
         android:padding="12dp"
-        android:background="@android:drawable/editbox_background" />
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="12dp" />
 
+    <!-- Ô nhập độ tuổi -->
+    <EditText
+        android:id="@+id/editTextAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:hint="@string/enter_your_age"
+        android:inputType="number"
+        android:padding="12dp"
+        android:background="@android:drawable/editbox_background"
+        android:layout_marginBottom="12dp" />
+
+    <!-- Ô nhập sở thích -->
+
+    <!-- Nút bắt đầu chat -->
     <Button
         android:id="@+id/btnStartChat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Start Text Chat"
+        android:text="@string/start_text_chat"
         android:layout_marginTop="24dp"
         android:backgroundTint="#2196F3"
         android:textColor="#ffffff"
