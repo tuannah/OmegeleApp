@@ -42,8 +42,9 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        btnGoRegister.setOnClickListener(v -> {
-            startActivity(new Intent(this, RegisterActivity.class));
-        });
+        btnGoRegister.setOnClickListener(v -> startActivity(new Intent(this, RegisterActivity.class)));
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
     }
 }

@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         // Tạo danh sách quốc tịch + cờ
         List<Country> countries = new ArrayList<>();
-        countries.add(new Country("English", R.drawable.flag_usa));
+        countries.add(new Country("America", R.drawable.flag_usa));
         countries.add(new Country("VietNam", R.drawable.flag_vietnam));
 
         // Thêm các cờ khác nếu cần
@@ -58,5 +58,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         });
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().hide();
+        }
+
     }
 }

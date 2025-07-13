@@ -6,4 +6,5 @@
     <string name="enter_your_nationality">Enter your nationality</string>
     <string name="enter_your_age">Enter your age</string>
     <string name="start_text_chat">Start Text Chat</string>
+    <string name="flag">Flag</string>
 </resources>
