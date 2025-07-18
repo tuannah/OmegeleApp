@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout cho MainActivity - Màn hình chính của ứng dụng -->
+<!-- Hiển thị form nhập thông tin người dùng và các nút để bắt đầu chat/call -->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
@@ -8,6 +11,7 @@
     android:gravity="center"
     android:background="#ffffff">
 
+    <!-- Tiêu đề ứng dụng -->
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
@@ -17,7 +21,7 @@
         android:textColor="#000000"
         android:textSize="24sp" />
 
-    <!-- Ô nhập tên -->
+    <!-- Ô nhập tên người dùng -->
     <EditText
         android:id="@+id/editTextName"
         android:layout_width="match_parent"
@@ -29,7 +33,7 @@
         android:background="@android:drawable/editbox_background"
         android:layout_marginBottom="12dp" />
 
-    <!-- Spinner chọn quốc tịch kèm lá cờ -->
+    <!-- Dropdown chọn quốc tịch kèm lá cờ -->
     <Spinner
         android:id="@+id/spinnerNationality"
         android:layout_width="match_parent"
@@ -49,15 +53,29 @@
         android:background="@android:drawable/editbox_background"
         android:layout_marginBottom="12dp" />
 
+    <!-- Ô nhập sở thích -->
+    <!-- Đã xóa EditText nhập sở thích ở đây -->
 
-    <!-- Nút bắt đầu chat -->
+    <!-- Nút bắt đầu cuộc gọi thoại -->
     <Button
-        android:id="@+id/btnStartChat"
+        android:id="@+id/btnStartVoiceCall"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start_text_chat"
+        android:text="@string/start_voice_call"
         android:layout_marginTop="24dp"
-        android:backgroundTint="#2196F3"
+        android:backgroundTint="#4CAF50"
         android:textColor="#ffffff"
         android:padding="12dp" />
+
+    <!-- Nút đăng xuất -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/logout"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#F44336"
+        android:textColor="#ffffff"
+        android:padding="12dp" />
+
 </LinearLayout>

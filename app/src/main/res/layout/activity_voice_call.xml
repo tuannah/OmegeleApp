@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/voice_call_background"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Avatar placeholder -->
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/avatar_background"
+        android:src="@drawable/ic_person"
+        android:scaleType="centerInside"
+        android:contentDescription="Avatar" />
+
+    <!-- Partner Info Section -->
+    <LinearLayout
+        android:id="@+id/layoutPartnerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#4D000000"
+        android:padding="20dp"
+        android:layout_marginBottom="16dp"
+        android:visibility="gone"
+        android:elevation="8dp">
+
+        <!-- Partner Name -->
+        <TextView
+            android:id="@+id/tvPartnerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="👤 Đang tìm..."
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+        <!-- Partner Age -->
+        <TextView
+            android:id="@+id/tvPartnerAge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🎂 -- tuổi"
+            android:textColor="#E8000000"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+        <!-- Partner Country -->
+        <TextView
+            android:id="@+id/tvPartnerCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="🌍 --"
+            android:textColor="#E8000000"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="12dp" />
+        <!-- Connection Time -->
+        <TextView
+            android:id="@+id/tvConnectionTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="⏱️ Kết nối: --"
+            android:textColor="#4CAF50"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Status text -->
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/connecting"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Chat messages (initially hidden) -->
+    <ListView
+        android:id="@+id/listViewMessages"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="16dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="4dp"
+        android:background="#33FFFFFF"
+        android:visibility="gone" />
+
+    <!-- Chat input (initially hidden) -->
+    <LinearLayout
+        android:id="@+id/layoutChatInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:hint="Nhập tin nhắn..."
+            android:background="@drawable/edit_text_background"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#AAAAAA"
+            android:padding="8dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btnSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Gửi"
+            android:background="@drawable/circle_button_background"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp" />
+    </LinearLayout>
+
+    <!-- Call controls -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="16dp">
+
+        <!-- Mute button -->
+        <Button
+            android:id="@+id/btnMute"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="@string/mute"
+            android:background="@drawable/circle_button_background"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <!-- Speaker button -->
+        <Button
+            android:id="@+id/btnSpeaker"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/speaker_on"
+            android:background="@drawable/circle_button_background"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- End call and Next buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- End call button -->
+        <Button
+            android:id="@+id/btnEndCall"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="@string/end_call"
+            android:background="@drawable/disconnect_button_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Next button -->
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="@string/next"
+            android:background="@drawable/next_button_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Logout button -->
+    <Button
+        android:id="@+id/btnLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="Đăng xuất"
+        android:backgroundTint="#F44336"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp" />
+
+</LinearLayout> 
